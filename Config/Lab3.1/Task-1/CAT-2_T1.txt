@@ -1,0 +1,271 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2017.11.17 23:47:25 =~=~=~=~=~=~=~=~=~=~=~=
+term le 0
+CAT-2#show run
+Building configuration...
+
+Current configuration : 2583 bytes
+!
+! Last configuration change at 16:11:29 UTC Fri Nov 17 2017
+!
+version 15.1
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
+!
+hostname CAT-2
+!
+boot-start-marker
+boot-end-marker
+!
+!
+logging discriminator EXCESS severity drops 6 msg-body drops EXCESSCOLL 
+logging buffered 50000
+logging console discriminator EXCESS
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+ip cef
+!
+!
+no ip domain-lookup
+no ipv6 cef
+ipv6 multicast rpf use-bgp
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+!
+!
+!
+vlan internal allocation policy ascending
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Ethernet0/0
+ switchport access vlan 21
+ switchport mode access
+!
+interface Ethernet0/1
+ switchport access vlan 12
+ switchport mode access
+!
+interface Ethernet0/2
+ shutdown
+ duplex auto
+!
+interface Ethernet0/3
+ shutdown
+ duplex auto
+!
+interface Ethernet1/0
+ shutdown
+ duplex auto
+!
+interface Ethernet1/1
+ shutdown
+ duplex auto
+!
+interface Ethernet1/2
+ shutdown
+ duplex auto
+!
+interface Ethernet1/3
+ shutdown
+ duplex auto
+!
+interface Ethernet2/0
+ shutdown
+ duplex auto
+!
+interface Ethernet2/1
+ shutdown
+ duplex auto
+!
+interface Ethernet2/2
+ shutdown
+ duplex auto
+!
+interface Ethernet2/3
+ shutdown
+ duplex auto
+!
+interface Ethernet3/0
+ shutdown
+ duplex auto
+!
+interface Ethernet3/1
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 2-4094
+ switchport mode trunk
+!
+interface Ethernet3/2
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 2-4094
+ switchport mode trunk
+!
+interface Ethernet3/3
+ shutdown
+ duplex auto
+!
+interface Ethernet4/0
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 2-4094
+ switchport mode trunk
+!
+interface Ethernet4/1
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 2-4094
+ switchport mode trunk
+!
+interface Ethernet4/2
+ shutdown
+ duplex auto
+!
+interface Ethernet4/3
+ shutdown
+ duplex auto
+!
+interface Ethernet5/0
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 2-4094
+ switchport mode trunk
+!
+interface Ethernet5/1
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 2-4094
+ switchport mode trunk
+!
+interface Ethernet5/2
+ shutdown
+ duplex auto
+!
+interface Ethernet5/3
+ shutdown
+ duplex auto
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+!
+no ip http server
+!
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line vty 0 4
+ login
+!
+end
+
+CAT-2#exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CAT-2 con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

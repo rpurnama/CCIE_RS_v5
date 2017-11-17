@@ -1,0 +1,218 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2017.11.17 23:45:55 =~=~=~=~=~=~=~=~=~=~=~=
+
+R2>ena
+R2#term le 0
+R2#show run
+Building configuration...
+
+Current configuration : 1445 bytes
+!
+upgrade fpd auto
+version 12.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname R2
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no aaa new-model
+ip cef
+!
+!
+!
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+archive
+ log config
+  hidekeys
+! 
+!
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ no ip address
+ shutdown
+ duplex half
+!
+interface FastEthernet1/0
+ mac-address 0000.2222.0000
+ ip address 10.1.21.2 255.255.255.0
+ duplex full
+ speed 100
+!
+interface FastEthernet1/1
+ mac-address 0000.2222.1111
+ ip address 10.1.12.2 255.255.255.0
+ duplex full
+ speed 100
+!
+interface Serial2/0
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial2/1
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial2/2
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial2/3
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial2/4
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial2/5
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial2/6
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial2/7
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+ip forward-protocol nd
+no ip http server
+no ip http secure-server
+!
+!
+!
+logging alarm informational
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+!
+gatekeeper
+ shutdown
+!
+!
+line con 0
+ stopbits 1
+line aux 0
+ stopbits 1
+line vty 0 4
+ login
+!
+!
+end
+
+R2#exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+R2 con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+
