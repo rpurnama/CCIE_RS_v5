@@ -1,4 +1,8 @@
 This is a backup folder to store all my configurations during lab exercise.
 
 INE-GNS3_Preconfig.zip:
-  All initial lab configurations based on INE RSv5 Workbook. There are two version: Original and Ronnel, there are some modifications in the Ronnel version based on his update topology (port/interface ID). Please use and refer to his diagram and topology version in the Topology folder.
+  All initial lab configurations based on INE RSv5 Workbook. 
+  There are two version: 
+    - Original version
+    - Ronnel version; there are some modifications in the Ronnel version based on his update topology (port/interface ID).
+      Please use and refer to his diagram and topology version in the Topology folder.
